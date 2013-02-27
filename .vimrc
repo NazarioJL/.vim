@@ -223,17 +223,7 @@ set hidden 	" buffers can exist in background without being in a window
 
 set spell 		"enable in-line spell check
 set spelllang=en
-
-"============= Line Numbers =============
-
-" Line numbers (set relative in 7.3 because it's useful); 
-" Fall back to absolute if 7.2 and lower
-if v:version >= 703
-	set rnu 	" if version 7.3 set relative line numbers
-else
-	set nu		" otherwise set absolute, because there is no rnu
-endif
-
+set nu		" otherwise set absolute, because there is no rnu
 set cul		" highlight cursor line 
 set nopaste	" pasting with auto-indent disabled (breaks bindings in cli vim)
 
