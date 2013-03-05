@@ -266,8 +266,8 @@ set lbr
 set tabstop=4
 set softtabstop=4 	" makes backspace treat 4 spaces like a tab
 set shiftwidth=4    " makes indents 4 spaces wide as well
-set expandtab 		" actually, expand tabs into spaces
-" set noexpandtab 	" don't expand tabs to spaces (cause fuck that)
+" set expandtab 		" actually, expand tabs into spaces
+set noexpandtab 	" don't expand tabs to spaces (cause fuck that)
 
 set backspace=indent,eol,start
 
@@ -405,7 +405,7 @@ nnoremap <f1> :NERDTreeToggle<cr>
 
 " TagList shortcut
 nnoremap <f2> :TlistToggle<cr>
-
+nnoremap <C-t> :FufFile **/<cr>
 " force snipmate accept custom defined snippets on windows
 if has('win32')
 	let g:snippets_dir="c:/Users/luke/.vim/bundle/snipmate/snippets/,c:/Users/luke/.vim/bundle/snipmate-custom-snippets/snippets"
