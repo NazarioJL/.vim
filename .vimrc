@@ -244,13 +244,6 @@ nnoremap <f5> :call g:ToggleNuMode()<cr>
 " show line and column markers
 set cursorline
 set cursorcolumn
-
-if v:version >= 703
-    " for some reason this does not work in 7.2
-    " highlight column 80
-    set colorcolumn=80
-endif
-
 set scrolloff=3	" 3 line offset when scrolling
 
 " turn off the *FUCKING* cursor blink
@@ -376,29 +369,18 @@ call pathogen#infect()
 " This is necessary to make Gdiff work
 let g:miniBufExplorerMoreThanOne=3
 
-" Solarized color scheme setup
-if has('gui_running')
-	" use the light (yellowish background) scheme in GUI
-	set background=dark
-else
-	" specific settings for terminal 
-	set t_Co=256                        " force vim to use 256 colors
-	let g:solarized_termcolors=256      " use solarized 256 fallback
-	set background=dark                " change this if you want dark scheme
+" specific settings for terminal 
+set t_Co=256                        " force vim to use 256 colors
+" let g:solarized_termcolors=256      " use solarized 256 fallback
+" set background=dark                " change this if you want dark scheme
 
-    " Tell vim to change the shape of the cursor based on mode
-	" let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-    " let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+" Tell vim to change the shape of the cursor based on mode
+" let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+" let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
-endif
 
 " enable solarized color scheme
-colorscheme solarized
-
-" change the color of the column 80
-" this needs to be called after solarized
-highlight ColorColumn guibg=lightyellow
-
+colorscheme Tomorrow-Night
 
 " bind NERDTree to F1 (we don't need help)
 nnoremap <f1> :NERDTreeToggle<cr>
@@ -406,11 +388,11 @@ nnoremap <f1> :NERDTreeToggle<cr>
 " TagList shortcut
 nnoremap <f2> :TlistToggle<cr>
 nnoremap <C-t> :FufFile **/<cr>
+
 " force snipmate accept custom defined snippets on windows
 if has('win32')
 	let g:snippets_dir="c:/Users/luke/.vim/bundle/snipmate/snippets/,c:/Users/luke/.vim/bundle/snipmate-custom-snippets/snippets"
 endif
-
 
 " MiniBufExpl Plugin Settings
 let g:miniBufExplMapCTabSwitchBufs = 1 
