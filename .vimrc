@@ -383,7 +383,7 @@ if has('gui_running')
 else
 	" specific settings for terminal 
 	set t_Co=256                        " force vim to use 256 colors
-	" let g:solarized_termcolors=256      " use solarized 256 fallback
+	let g:solarized_termcolors=256      " use solarized 256 fallback
 	set background=dark                " change this if you want dark scheme
 
     " Tell vim to change the shape of the cursor based on mode
