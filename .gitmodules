@@ -45,4 +45,7 @@
 	url = https://github.com/sjl/gundo.vim.git
 [submodule "bundle/scss-syntax.vim"]
 	path = bundle/scss-syntax.vim
-	url = https://github.com/cakebaker/scss-syntax.vim.git
+    url = https://github.com/cakebaker/scss-syntax.vim.git
+[submodule "bundle/typescript-vim"]
+	path = bundle/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git
