@@ -243,7 +243,6 @@ nnoremap <f5> :call g:ToggleNuMode()<cr>
 
 " show line and column markers
 set cursorline
-set cursorcolumn
 set scrolloff=3	" 3 line offset when scrolling
 
 " turn off the *FUCKING* cursor blink
@@ -299,19 +298,6 @@ set mouse=a			" Enable mouse usage (all modes) in terminals
 " sudo save file with w!
 cmap w!! w !sudo tee % >/dev/null
 
-"=========== Syntax Highlighting & Indents ==============
-syntax on
-filetype on
-filetype indent on
-filetype plugin on
-filetype plugin indent on
-
-set autoindent 		" always indent
-set copyindent 		" copy previous indent on autoindenting
-set smartindent
-
-set backspace=indent,eol,start 	" backspace over everything in insert mode
-
 " ============== Status Line ==============
 
 set ls=2 			" Always show status line
@@ -363,6 +349,19 @@ let g:tex_flavor='latex'
 
 call pathogen#infect()
 
+"=========== Syntax Highlighting & Indents ==============
+syntax on
+filetype off
+filetype on
+filetype indent on
+filetype plugin on
+filetype plugin indent on
+
+set autoindent 		" always indent
+set copyindent 		" copy previous indent on autoindenting
+set smartindent
+
+set backspace=indent,eol,start 	" backspace over everything in insert mode
 
 "============== Plugin Specific Settings ==============
 

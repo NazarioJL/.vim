@@ -28,9 +28,6 @@
 [submodule "bundle/taglist"]
 	path = bundle/taglist
 	url = https://github.com/vim-scripts/taglist.vim.git
-[submodule "bundle/nerdcommenter"]
-	path = bundle/nerdcommenter
-	url = https://github.com/scrooloose/nerdcommenter.git
 [submodule "bundle/vim-neatstatus"]
 	path = bundle/vim-neatstatus
 	url = https://github.com/maciakl/vim-neatstatus.git
@@ -49,3 +46,7 @@
 [submodule "bundle/typescript-vim"]
 	path = bundle/typescript-vim
 	url = https://github.com/leafgarland/typescript-vim.git
+	url = https://github.com/cakebaker/scss-syntax.vim.git
+[submodule "bundle/tcomment"]
+	path = bundle/tcomment
+	url = git://github.com/tomtom/tcomment_vim.git
